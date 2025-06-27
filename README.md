@@ -27,15 +27,14 @@ Plugins can access environment variables and secrets in two ways:
 
 1. **Character Configuration**: Through `agent.json.secret` or character settings in eliza:
 
-
    ```json
    {
      "name": "MyAgent",
      "settings": {
        "secrets": {
-        "KAIA_KAIASCAN_API_KEY": "your-kaiascan-api-key",
-        "KAIA_EVM_PRIVATE_KEY": "your-evm-private-key",
-        "KAIA_FAUCET_AMOUNT": "amount-in-kaia" 
+         "KAIA_KAIASCAN_API_KEY": "your-kaiascan-api-key",
+         "KAIA_EVM_PRIVATE_KEY": "your-evm-private-key",
+         "KAIA_FAUCET_AMOUNT": "amount-in-kaia"
        }
      }
    }
@@ -53,21 +52,24 @@ Plugins can access environment variables and secrets in two ways:
    ```
 
 The `getSetting` method follows this precedence:
+
 1. Character settings secrets
 2. Character settings
 3. Global settings
 
 ### Plugin Registration
+
 Add it to your agent's character configuration:
-   ```json
-   {
-     "name": "MyAgent",
-     "plugins": [
-       "@elizaos-plugins/plugin-kaia"
-     ]
-   }
-   ```
+
+```json
+{
+  "name": "MyAgent",
+  "plugins": ["@elizaos-plugins/plugin-kaia"]
+}
+```
+
 ### Run Eliza Project
+
 ```
 cd eliza
 pnpm install
@@ -196,11 +198,11 @@ Assistant: "The transactions for account is empty";
 
 ### Environment Variables
 
-| Variable              | Description           | Required |
-| --------------------- | --------------------- | -------- |
-| KAIA_KAIASCAN_API_KEY | Your KaiaScan API key | Yes      |
-| KAIA_FAUCET_AMOUNT    | Test Tokens amount to distribute to users (Defaults to 1 KAIA)    | Yes      |
-| KAIA_EVM_PRIVATE_KEY  | Your Private key     | Yes      |
+| Variable              | Description                                                    | Required |
+| --------------------- | -------------------------------------------------------------- | -------- |
+| KAIA_KAIASCAN_API_KEY | Your KaiaScan API key                                          | Yes      |
+| KAIA_FAUCET_AMOUNT    | Test Tokens amount to distribute to users (Defaults to 1 KAIA) | Yes      |
+| KAIA_EVM_PRIVATE_KEY  | Your Private key                                               | Yes      |
 
 ### Providers
 
@@ -231,38 +233,33 @@ pnpm build
 The following features and improvements are planned for future releases:
 
 1. **Wallet Integration**
-
-    - Account abstraction
-    - Transaction history tracking
+   - Account abstraction
+   - Transaction history tracking
 
 2. **Smart Contract Features**
-
-    - Contract deployment tools
-    - Testing framework
-    - Security analysis
+   - Contract deployment tools
+   - Testing framework
+   - Security analysis
 
 3. **Token Operations**
-
-    - Batch token transfers
-    - NFT support enhancement
-    - Token metadata handling
-    - Custom token standards
-    - Collection management
-    - Integration with Bridges and Oracle services
+   - Batch token transfers
+   - NFT support enhancement
+   - Token metadata handling
+   - Custom token standards
+   - Collection management
+   - Integration with Bridges and Oracle services
 
 4. **Developer Tools**
-
-    - Enhanced debugging
-    - CLI improvements
-    - Documentation generator
-    - Integration templates
-    - Performance monitoring
+   - Enhanced debugging
+   - CLI improvements
+   - Documentation generator
+   - Integration templates
+   - Performance monitoring
 
 5. **Transaction Management**
-
-    - Batch transaction processing
-    - Transaction simulation
-    - Custom transaction builders
+   - Batch transaction processing
+   - Transaction simulation
+   - Custom transaction builders
 
 We welcome community feedback and contributions to help prioritize these enhancements.
 
