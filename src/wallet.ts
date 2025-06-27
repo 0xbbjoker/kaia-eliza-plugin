@@ -1,11 +1,8 @@
 import type { WalletClientBase } from "@goat-sdk/core";
 import { viem } from "@goat-sdk/wallet-viem";
-import {
-  createWalletClient,
-  http,
-} from "@goat-sdk/wallet-viem/node_modules/viem";
-import { privateKeyToAccount } from "@goat-sdk/wallet-viem/node_modules/viem/accounts";
-import { kaia, kairos } from "@goat-sdk/wallet-viem/node_modules/viem/chains";
+import { createWalletClient, http } from "viem";
+import { privateKeyToAccount } from "viem/accounts";
+import { kaia, kairos } from "viem/chains";
 import type {
   Provider,
   IAgentRuntime,
